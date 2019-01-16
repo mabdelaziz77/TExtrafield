@@ -52,7 +52,7 @@ class plgK2TExtrafield extends K2Plugin {
             
             if($item->text){
                 $regex	  = '/{extrafield+(.*?)}/i';
-                preg_match_all($regex, $item->introtext, $matches, PREG_SET_ORDER);
+                preg_match_all($regex, $item->text, $matches, PREG_SET_ORDER);
                 if($matches) {
                     foreach($matches as $match){
                         $fieldAlias = trim($match[1]);
