@@ -47,7 +47,7 @@ class plgK2TExtrafield extends K2Plugin {
         if(K2_JVERSION == '15') $pluginParams = new JParameter($plugin->params);
         else $pluginParams = new JRegistry($plugin->params);
         
-        if ($view == 'item'){
+        if ($view == 'item' || $view == 'itemlist'){
             $mainframe = JFactory::getApplication();            
             
             if($item->text){
